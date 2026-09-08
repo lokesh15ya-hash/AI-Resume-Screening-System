@@ -156,6 +156,12 @@ the system identifies the matched and missing skills and calculates the candidat
 * Improve candidate filtering
 * Deploy the application online
 
+
+### Home Page
+
+![AI Resume Screening System - Home Page](screenshots/home.png)
+
+
 ## Author
 
 **Lokesh Yadav**
