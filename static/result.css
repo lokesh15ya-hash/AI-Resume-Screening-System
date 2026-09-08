@@ -1,0 +1,302 @@
+* {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+            margin: 0;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        /* ==============================
+           HEADER
+        ============================== */
+
+        .header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .header h1 {
+            color: #1f2937;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #6b7280;
+            font-size: 16px;
+        }
+
+
+        /* ==============================
+           BEST CANDIDATE
+        ============================== */
+
+        .best-candidate {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .best-candidate h2 {
+            color: #4f46e5;
+            margin-bottom: 15px;
+        }
+
+        .candidate-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #111827;
+            margin: 10px 0;
+        }
+
+        .score-label {
+            color: #6b7280;
+            margin-top: 15px;
+        }
+
+        .score {
+            font-size: 34px;
+            font-weight: bold;
+            color: #16a34a;
+            margin: 8px 0;
+        }
+
+        .best-status {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 18px;
+            border-radius: 20px;
+            background: #dcfce7;
+            color: #166534;
+            font-weight: bold;
+        }
+
+
+        /* ==============================
+           SUMMARY
+        ============================== */
+
+        .summary {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .summary-card {
+            flex: 1;
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .summary-card h3 {
+            color: #6b7280;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .summary-card p {
+            font-size: 30px;
+            font-weight: bold;
+            color: #4f46e5;
+            margin: 0;
+        }
+
+
+        /* ==============================
+           SCORE INFORMATION
+        ============================== */
+
+        .score-info {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+
+        .score-info h2 {
+            color: #1f2937;
+            margin-bottom: 15px;
+        }
+
+        .score-info p {
+            color: #4b5563;
+            line-height: 1.6;
+        }
+
+        .score-formula {
+            background: #f4f7fb;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+
+        /* ==============================
+           SKILLS
+        ============================== */
+
+        .skills-section {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+
+        .skills-section h2 {
+            color: #1f2937;
+            margin-bottom: 18px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #eef2ff;
+            color: #4338ca;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+
+        /* ==============================
+           RANKING TABLE
+        ============================== */
+
+        .ranking-section {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            overflow-x: auto;
+        }
+
+        .ranking-section h2 {
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            min-width: 900px;
+        }
+
+        th {
+            background: #4f46e5;
+            color: white;
+            padding: 14px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        td {
+            padding: 14px;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 14px;
+        }
+
+        tr:hover {
+            background: #f9fafb;
+        }
+
+        .rank {
+            font-weight: bold;
+        }
+
+        .final-score {
+            font-weight: bold;
+            color: #16a34a;
+        }
+
+
+        /* ==============================
+           STATUS
+        ============================== */
+
+        .status {
+            font-weight: bold;
+        }
+
+
+        /* ==============================
+           SKILL BADGES
+        ============================== */
+
+        .matched {
+            color: #166534;
+        }
+
+        .missing {
+            color: #b91c1c;
+        }
+
+
+        /* ==============================
+           BACK BUTTON
+        ============================== */
+
+        .back-button {
+            display: block;
+            width: 230px;
+            margin: 30px auto;
+            padding: 13px;
+            text-align: center;
+            background: #4f46e5;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            background: #4338ca;
+        }
+
+
+        /* ==============================
+           MOBILE
+        ============================== */
+
+        @media (max-width: 700px) {
+
+            .container {
+                width: 95%;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .summary {
+                flex-direction: column;
+            }
+
+            .best-candidate {
+                padding: 22px;
+            }
+
+        }

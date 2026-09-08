@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Resume Screening System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+
+        <div class="header">
+
+            <h1>AI Resume Screening System</h1>
+
+            <p>
+                Automatically analyze and rank resumes using
+                AI-powered resume screening.
+            </p>
+
+        </div>
+
+
+        <!-- Main Card -->
+
+        <div class="card">
+
+            <form
+                action="/screen"
+                method="POST"
+                enctype="multipart/form-data"
+            >
+
+                <!-- Job Description -->
+
+                <div class="section">
+
+                    <h2>Job Description</h2>
+
+                    <textarea
+                        name="job_description"
+                        placeholder="Enter the job description here..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Resume Upload -->
+
+                <div class="section">
+
+                    <h2>Upload Resumes</h2>
+
+                    <div class="file-box">
+
+                        <p>
+                            Select one or multiple PDF resumes
+                        </p>
+
+                        <input
+                            type="file"
+                            name="resumes"
+                            multiple
+                            accept=".pdf"
+                            required
+                        >
+
+                        <p class="file-info">
+                            You can select multiple PDF files at once.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Submit Button -->
+
+                <button type="submit">
+                    Screen Resumes
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- Footer -->
+
+        <div class="footer">
+
+            AI Resume Screening System
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

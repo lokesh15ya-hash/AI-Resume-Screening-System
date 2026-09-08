@@ -1,0 +1,260 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resume Screening Results</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+
+        <!-- ==============================
+             HEADER
+        ============================== -->
+
+        <div class="header">
+
+            <h1>🤖 AI Resume Screening Results</h1>
+
+            <p>
+                Resume analysis, skill matching and candidate ranking
+            </p>
+
+        </div>
+
+
+        <!-- ==============================
+             BEST CANDIDATE
+        ============================== -->
+
+        <div class="best-candidate">
+
+            <h2>🏆 Best Candidate</h2>
+
+            <p class="candidate-name">
+                {{ best_candidate.filename }}
+            </p>
+
+            <p class="score-label">
+                Final Matching Score
+            </p>
+
+            <p class="score">
+                {{ "%.2f"|format(best_candidate.final_score) }}%
+            </p>
+
+            <span class="best-status">
+                {{ best_candidate.status }}
+            </span>
+
+        </div>
+
+
+        <!-- ==============================
+             SCREENING SUMMARY
+        ============================== -->
+
+        <div class="summary">
+
+            <div class="summary-card">
+
+                <h3>Required Skills</h3>
+
+                <p>
+                    {{ required_skills|length }}
+                </p>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <h3>Matched Skills</h3>
+
+                <p>
+                    {{ best_candidate.matched_skills|length }}
+                </p>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <h3>Missing Skills</h3>
+
+                <p>
+                    {{ best_candidate.missing_skills|length }}
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==============================
+             SCORE EXPLANATION
+        ============================== -->
+
+        <div class="score-info">
+
+            <h2>📈 How the Final Score is Calculated</h2>
+
+            <p>
+                The system evaluates each resume using two factors:
+            </p>
+
+            <p>
+                <strong>TF-IDF Similarity:</strong> 40%
+            </p>
+
+            <p>
+                <strong>Skill Match:</strong> 60%
+            </p>
+
+            <div class="score-formula">
+
+                Final Score =
+                (TF-IDF Score × 40%)
+                +
+                (Skill Match Score × 60%)
+
+            </div>
+
+        </div>
+
+
+        <!-- ==============================
+             REQUIRED SKILLS
+        ============================== -->
+
+        <div class="skills-section">
+
+            <h2>📋 Required Skills</h2>
+
+            <div class="skills">
+
+                {% for skill in required_skills %}
+
+                <span class="skill">
+                    {{ skill }}
+                </span>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+
+        <!-- ==============================
+             RESUME RANKING
+        ============================== -->
+
+        <div class="ranking-section">
+
+            <h2>📊 Resume Ranking</h2>
+
+            <table>
+
+                <tr>
+
+                    <th>Rank</th>
+
+                    <th>Resume</th>
+
+                    <th>TF-IDF Score</th>
+
+                    <th>Skill Match</th>
+
+                    <th>Final Score</th>
+
+                    <th>Status</th>
+
+                    <th>Matched Skills</th>
+
+                    <th>Missing Skills</th>
+
+                </tr>
+
+
+                {% for result in results %}
+
+                <tr>
+
+                    <td class="rank">
+                        #{{ loop.index }}
+                    </td>
+
+                    <td>
+                        {{ result.filename }}
+                    </td>
+
+                    <td>
+                        {{ "%.2f"|format(result.tfidf_score) }}%
+                    </td>
+
+                    <td>
+                        {{ "%.2f"|format(result.skill_score) }}%
+                    </td>
+
+                    <td class="final-score">
+                        {{ "%.2f"|format(result.final_score) }}%
+                    </td>
+
+                    <td class="status">
+                        {{ result.status }}
+                    </td>
+
+                    <td class="matched">
+                        {% if result.matched_skills %}
+                            {{ result.matched_skills|join(", ") }}
+                        {% else %}
+                            None
+                        {% endif %}
+                    </td>
+
+                    <td class="missing">
+                        {% if result.missing_skills %}
+                            {{ result.missing_skills|join(", ") }}
+                        {% else %}
+                            None
+                        {% endif %}
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </table>
+
+        </div>
+
+
+        <!-- ==============================
+             BACK BUTTON
+        ============================== -->
+
+        <a href="/" class="back-button">
+            ← Screen More Resumes
+        </a>
+
+
+    </div>
+
+</body>
+
+</html>
+```

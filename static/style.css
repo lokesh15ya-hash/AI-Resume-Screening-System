@@ -1,0 +1,108 @@
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 50px auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .header h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 17px;
+        }
+
+        .card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            margin-bottom: 12px;
+            font-size: 21px;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 180px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            resize: vertical;
+            font-size: 15px;
+            font-family: Arial, sans-serif;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #4a6cf7;
+        }
+
+        .file-box {
+            border: 2px dashed #bbb;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            background: #fafafa;
+        }
+
+        .file-box input {
+            margin-top: 15px;
+            font-size: 15px;
+        }
+
+        .file-info {
+            margin-top: 12px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background: #4a6cf7;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #3451c9;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #888;
+            font-size: 14px;
+        }
+
+    
