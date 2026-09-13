@@ -156,6 +156,7 @@ the system identifies the matched and missing skills and calculates the candidat
 * Improve candidate filtering
 * Deploy the application online
 
+## Screenshots
 
 ### Home Page
 
@@ -163,7 +164,7 @@ the system identifies the matched and missing skills and calculates the candidat
 
 ### Results Page
 
-![AI Resume Screening System - Results Page](screenshots/results.png)
+![AI Resume Screening System - Results Page](screenshots/result.png)
 
 ## Author
 
