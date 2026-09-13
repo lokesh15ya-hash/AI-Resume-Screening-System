@@ -161,6 +161,9 @@ the system identifies the matched and missing skills and calculates the candidat
 
 ![AI Resume Screening System - Home Page](screenshots/home.png)
 
+### Results Page
+
+![AI Resume Screening System - Results Page](screenshots/results.png)
 
 ## Author
 

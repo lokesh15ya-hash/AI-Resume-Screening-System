@@ -109,16 +109,16 @@ def screen():
 
 
         # Store resume information
-        resumes.append(text)
-
-        filenames.append(resume.filename)
-
 
         if not text.strip():
 
             print("WARNING: No text extracted from:", resume.filename)
 
             continue
+        
+        resumes.append(text)
+        
+        filenames.append(resume.filename)
 
     # -----------------------------------------
     # Check Resume Upload
